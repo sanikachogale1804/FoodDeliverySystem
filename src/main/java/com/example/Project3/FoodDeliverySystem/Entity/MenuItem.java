@@ -18,7 +18,7 @@ public class MenuItem {
 	
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.AUTO)
-	 private String id;
+	 private int id;
 	    
 	 @Column(nullable = false)
 	 private String name;

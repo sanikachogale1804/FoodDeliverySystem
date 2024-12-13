@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Fallback;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -22,7 +24,6 @@ import lombok.NoArgsConstructor;
 public class User {
 	
 	 @Id
-	 @GeneratedValue(strategy = GenerationType.AUTO)
 	 private String id;
 	    
 	 @Column(nullable = false)
@@ -45,5 +46,5 @@ public class User {
      
      @OneToMany(mappedBy = "deliveryPerson")
      private List<Delivery> deliveries;
-	 
+     
 }

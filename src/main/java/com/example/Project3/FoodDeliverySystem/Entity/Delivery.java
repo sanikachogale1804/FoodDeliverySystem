@@ -2,6 +2,8 @@ package com.example.Project3.FoodDeliverySystem.Entity;
 
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +27,7 @@ public class Delivery {
 	  private String id;
 	    
 	  @Column(nullable = false)
+	  @CreationTimestamp
 	  private LocalDateTime deliveryDate;
 	   
 	  @Column(nullable = false)

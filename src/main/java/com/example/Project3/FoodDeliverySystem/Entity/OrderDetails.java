@@ -3,6 +3,8 @@ package com.example.Project3.FoodDeliverySystem.Entity;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,9 +24,10 @@ public class OrderDetails {
 	
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.AUTO)
-	 private String id;
+	 private int id;
 	    
 	 @Column(nullable = false)
+	 @CreationTimestamp
 	 private LocalDateTime orderDate;
 	
 	 @Column(nullable = false)

@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.Project3.FoodDeliverySystem.Entity.OrderDetails;
 
-public interface OrderRepository extends JpaRepository<OrderDetails, String>{
+public interface OrderRepository extends JpaRepository<OrderDetails, Integer>{
 
 }
